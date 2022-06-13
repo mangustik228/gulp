@@ -10,9 +10,12 @@ export const path = {
         js: `${buildFolder}/js/`,
         css: `${buildFolder}/css/`,
         html: `${buildFolder}/`,
+        images: `${buildFolder}/img/`, 
         files: `${buildFolder}/files/`, // Куда переносим
     },
     src: {
+        images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
+        svg: `${srcFolder}/img/**/*.svg`,
         js: `${srcFolder}/js/app.js`,
         sass: `${srcFolder}/sass/style.sass`,
         html: `${srcFolder}/*.html`,
@@ -23,6 +26,7 @@ export const path = {
         sass: `${srcFolder}/sass/**/*.sass`,
         html: `${srcFolder}/**/*.html`, // Наблюдаем за всеми html
         files: `${srcFolder}/files/**/*.*`,
+        images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp,svg,ico}`
     }, // Папки за которыми надо следить
     clean: buildFolder, 
     buildFolder: buildFolder,
