@@ -12,9 +12,10 @@ global.app = {
     plugins: plugins,
 }
 
-import { copy } from "./gulp/tasks/copy.js" // Импорт задачи
-import { reset } from "./gulp/tasks/reset.js" // Импорт задачи удаления
-import { html } from "./gulp/tasks/html.js"
+import { copy } from "./gulp/tasks/copy.js"; // Импорт задачи
+import { reset } from "./gulp/tasks/reset.js"; // Импорт задачи удаления
+import { html } from "./gulp/tasks/html.js";
+import { server } from "./gulp/tasks/server.js";
 
 // Путь за которым нужно следить
 
@@ -27,7 +28,7 @@ function watcher() {
 const main_task = gulp.parallel(copy, html);
 
 // Построение сценариев выполнения задач
-const dev = gulp.series(reset, main_task, watcher); // Последовательное выполнение(удаляем -> копируем -> включаем_наблюдателя)
+const dev = gulp.series(reset, main_task, gulp.parallel(watcher,server)); // Последовательное выполнение(удаляем -> копируем -> включаем_наблюдателя)
 
 // Выполнения сценария по умолчанию
 gulp.task('default', dev);
