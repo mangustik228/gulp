@@ -7,14 +7,17 @@ const srcFolder = `./src`;
 // Какой то там объект в котором храниться вся информация о пути
 export const path = { 
     build: {
+        css: `${buildFolder}/css/`,
         html: `${buildFolder}/`,
         files: `${buildFolder}/files/`, // Куда переносим
     },
     src: {
+        sass: `${srcFolder}/sass/style.sass`,
         html: `${srcFolder}/*.html`,
         files: `${srcFolder}/files/**/*.*`, // Путь который хотим копировать  
     },
     watch: {
+        sass: `${srcFolder}/sass/**/*.sass`,
         html: `${srcFolder}/**/*.html`, // Наблюдаем за всеми html
         files: `${srcFolder}/files/**/*.*`,
     }, // Папки за которыми надо следить
