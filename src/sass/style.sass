@@ -1,6 +1,24 @@
-main
-	color: red
-	border: 1px solid #000
-	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif
-	font-size: 80px
-	
+@import "fonts"
+// Нулевой шаблон
+@import "_zero"
+
+// Переменная
+// $color_1: #c8f2ff5b
+
+// Создание шаблона и подключение шаблона
+// %tpl_border
+//     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif
+// li lu
+//      @exctend %tpl_border
+
+// Обращение к селекторам первого уровня
+// block > p (внутри тега block)
+
+// Обращение к родителю - &.
+
+// Миксины создание и подключение
+// @mixin fontz($f)
+//     font-size: $f
+// @include fontz(100px)
+
+      
