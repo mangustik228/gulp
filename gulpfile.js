@@ -17,16 +17,18 @@ import { reset } from "./gulp/tasks/reset.js"; // Импорт задачи уд
 import { html } from "./gulp/tasks/html.js";
 import { server } from "./gulp/tasks/server.js";
 import { scss } from "./gulp/tasks/sass.js";
+import { js } from "./gulp/tasks/js.js";
 // Путь за которым нужно следить
 
 function watcher() {
-    gulp.watch(path.watch.files, copy) // (путь_файла, действие_для_выполнения)
-    gulp.watch(path.watch.html, html) // (путь_файла, действие_для_выполнения)
-    gulp.watch(path.watch.sass, scss) 
+    gulp.watch(path.watch.files, copy); // (путь_файла, действие_для_выполнения)
+    gulp.watch(path.watch.html, html); // (путь_файла, действие_для_выполнения)
+    gulp.watch(path.watch.sass, scss); 
+    gulp.watch(path.watch.js, js); 
 }
 
 // Константа выполнения сценария
-const main_task = gulp.parallel(copy, html, scss);
+const main_task = gulp.parallel(copy, html, scss, js);
 
 // Построение сценариев выполнения задач
 const dev = gulp.series(reset, main_task, gulp.parallel(watcher,server)); // Последовательное выполнение(удаляем -> копируем -> включаем_наблюдателя)
