@@ -1,5 +1,5 @@
 
-### **Сборка Gulp** (автор: [Фрилансер по жизни](https://www.youtube.com/c/FreelancerLifeStyle) 
+### **Сборка Gulp** (автор: [Фрилансер по жизни](https://www.youtube.com/c/FreelancerLifeStyle))
 ___
 Подготовка:
 - установить [node.js](https://nodejs.org/en/)  
@@ -24,7 +24,7 @@ gulp --build # Сборка в продакшене
 ```
 - Настройки сервера прописываются в файле:
 ```bash
-gulp/config/ftp
+gulp/config/ftp.js
 ``` 
 - Возможно загрузка на ftp-сервер после каждого изменения, для этого для каждой просмотративаемой задачи заменить:
 ```bash
