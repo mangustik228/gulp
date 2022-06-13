@@ -1,10 +1,15 @@
 import gulp from "gulp";
-import { path } from "../gulp/gulp/config/path.js";
+import { path } from "./gulp/config/path.js";
+
+// Импорт плагинов
+import { plugins } from "./gulp/config/plugins.js"
+
 
 // Чего там с сущностями(по-ходу особенность js)
 global.app = {
     path: path,
-    gulp: gulp
+    gulp: gulp,
+    plugins: plugins,
 }
 
 import { copy } from "./gulp/tasks/copy.js" // Импорт задачи
