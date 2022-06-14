@@ -38,7 +38,13 @@ html -> gulp.series(html, ftp)
 ```bash
 # gulp/config/path.js
 # -> Везде меняем sass на scss
-# -> В остальных файлах оставляем все как есть
+#
+# gulp/tasks/fonts.js
+# -> Меняем sass/fonts.sass -> scss/fonts.scss | str[47] 
+# -> str[84,85] Редактируем вывод по SCSS
+#
+# !!! В остальных файлах оставляем все как есть !!!
+
 ```
 - Примечание:  
 Для удобной работы, необходимо установить Path Autocomplete(для vs code)  

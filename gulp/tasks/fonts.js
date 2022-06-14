@@ -44,7 +44,7 @@ export const ttfToWoff = () => {
 
 export const fontStyle = () => {
   // Файл стилей подключения шрифтов
-  let fontsFile = `${app.path.srcFolder}/scss/fonts.scss`
+  let fontsFile = `${app.path.srcFolder}/sass/fonts.sass`  // Если scss, то меняем на путь /sass/fonts.sass
   // Проверяем существуют ли файлы шрифтов
   fs.readdir(app.path.build.fonts, function (err, fontsFiles) {
     if (fontsFiles) {
@@ -81,14 +81,8 @@ export const fontStyle = () => {
             }
 
             fs.appendFile(fontsFile,
-              `@font-face {
-                font-family: ${fontName};
-                font-display: swap;
-                src: url("../fonts/${fontFileName}.woff2") format("woff2"),
-                    url("../fonts/${fontFileName}.woff") format("woff");
-                font-weight: ${fontWeight};
-                font-style: normal;
-              }\r\n`, cb)
+              `@font-face\n\tfont-family: ${fontName}\n\tfont-display: swap\n\tsrc: url("../fonts/${fontFileName}.woff2") format("woff2")\
+                    url("../fonts/${fontFileName}.woff") format("woff")\n\tfont-weight: ${fontWeight}\n\t\n\tfont-style: normal\n\n`, cb)
             newFileOnly = fontFileName
           }
         }
