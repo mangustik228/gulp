@@ -9,6 +9,7 @@ npm i gulp-cli -g
 ```
 Команды внутри проекта:
 ```bash
+npm i # Установка пакетов из package.json
 npm i gulp -D # Локальная установка
 gulp # Запустить сборку gulp
 gulp zip # Заархивировать
