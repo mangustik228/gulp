@@ -7,8 +7,8 @@
 	"scripts": {
 		"dev": "gulp",
 		"build": "gulp build --build",
-		"zip": "gulp zip --build",
-		"deploy": "gulp ftp --build",
+		"zip": "gulp deployZIP --build",
+		"deploy": "gulp deployFTP --build",
 		"svgSprive": "gulp svg"
 	},
 	"repository": {
