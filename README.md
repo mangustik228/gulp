@@ -33,4 +33,15 @@ copy -> gulp.series(copy, ftp)
 html -> gulp.series(html, ftp)
 ...
 ```
-
+- Сборка рассчитана на препроцессор SASS, чтоб использовать SCSS:
+```bash
+# gulp/config/path.js
+# -> Везде меняем sass на scss
+# -> В остальных файлах оставляем все как есть
+```
+- Примечание:  
+Для удобной работы, необходимо установить Path Autocomplete(для vs code)  
+Ссылки на относительные пути необходимо давать через @ , пример:
+```html
+<a href="@img/example.jpg">example</a>
+```
